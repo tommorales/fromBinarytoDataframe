@@ -17,7 +17,7 @@ class NetCDF(Read):
         if arrayDimension == 1: return self.file.variables[variable][:]
         if arrayDimension == 2: return self.file.variables[variable][:,:]
         if arrayDimension == 3: return self.file.variables[variable][:,:,:]
-        if arrayDimension == 4: return self.variables[variable][:,:,:,:]
+        if arrayDimension == 4: return self.file.variables[variable][:,:,:,:]
 
     def get_slide(self, timeStep=None, level=None, lon=None, lat=None):
         pass
